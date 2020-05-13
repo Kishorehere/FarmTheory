@@ -61,7 +61,7 @@
             <li><a href="index.html">Home</a></li>
             <li class="active"><a href="#">Buy/Sell</a></li>
             <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <!-- <li><a href="#contact">Contact Us</a></li> -->
           </ul>
         </nav>
@@ -77,23 +77,23 @@
     </header>
     <!-- End Header -->
 
-    <div class="cataloglayer" id="l1catalog">
+    <div class="cataloglayer">
       <img
-        src="assets/img/exports/2 yellow.png"
+        src="assets/img/exports/header web.png"
         alt="bg-shape"
-        style="width: 80%;"
+        class="catalogl1image"
       />
     </div>
-    <div class="cataloglayer" id="l2catalog">
+    <div class="cataloglayer">
       <img
-        src="assets/img/exports/1 white.png"
+        src="assets/img/exports/header mob.png"
         alt="bg-shape"
-        style="width: 80%;"
+        class="catalogl2image"
       />
     </div>
 
-    <div class="cataloglayer" id="l3catalog">
-      <img src="assets/img/logo.png" alt="bg-shape" class="buyselll3image" />
+    <div class="cataloglayer">
+      <img src="assets/img/logo.png" alt="bg-shape" class="catalogl3image" />
     </div>
 
     <!-- ======= Hero Section ======= -->
@@ -177,36 +177,35 @@
             <div class="col-lg-12">
               <div class="row portfolio-container1">
                 <div
-                  class="col-lg-12 col-md-12 col-sm-12 portfolio-item2 filter-app wow fadeInUp cardsmall contact"
-                  style="text-align: center;padding: 0 20% 0 20%;"
+                  class="col-lg-12 col-md-12 col-sm-12 portfolio-item2 filter-app wow fadeInUp cardsmall contact buysellcontainer"
                 >
                 <h1>Buy</h1>
                 <div class="col-lg-12 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
 
-                  <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                  <form action="" autocomplete="off" onsubmit="return postToGooglebuy();"  target="_self" id="formbuy" class="php-email-form">
                     <div class="form-row">
                       <div class="col-md-12 form-group">
-                        <input type="text" name="name" class="form-control" style ="border-radius:50px;" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                        <input type="text" class="form-control" style ="border-radius:50px;" name="entry.1241401524"  id="namebuy" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                         <div class="validate"></div>
                       </div>
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" style ="border-radius:50px;" name="phone" id="phone" placeholder="Phone number" data-rule="required" data-msg="Please enter a valid phonenumber" />
+                        <input type="text" class="form-control" style ="border-radius:50px;" name="entry.801958902" id="phonebuy" placeholder="Phone number" data-rule="required" data-msg="Please enter a valid phonenumber" />
                         <div class="validate"></div>
                       </div>
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" style ="border-radius:50px;" name="product" id="product" placeholder="Product" data-rule="required" data-msg="Please enter a valid product" />
+                        <input type="text" class="form-control" style ="border-radius:50px;" name="entry.566365920"  id="businessName" placeholder="Business Name" data-rule="required" data-msg="Please enter a valid product" />
                         <div class="validate"></div>
                       </div>
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" style ="border-radius:50px;" name="address" id="address" placeholder="Address" data-rule="required" data-msg="Please enter a valid address" />
+                        <input type="text" class="form-control" style ="border-radius:50px;" name="entry.641351040" id="businessType" placeholder="Business Type(Retailer, Restaurants, etc.)" data-rule="required" data-msg="Please enter a valid address" />
                         <div class="validate"></div>
                       </div>
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" style ="border-radius:50px;" name="district" id="district" placeholder="District" data-rule="required" data-msg="Please enter a valid district" />
+                        <input type="text" class="form-control" style ="border-radius:50px;" name="entry.1441151651" id="businessAddress" placeholder="Business Address" data-rule="required" data-msg="Please enter a valid district" />
                         <div class="validate"></div>
                       </div>
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" style ="border-radius:50px;" name="pin" id="pin" placeholder="Pincode" data-rule="required" data-msg="Please enter a valid pincode" />
+                        <input type="text" class="form-control" style ="border-radius:50px;" name="entry.97792871" id="pincodebuy" placeholder="Pincode" data-rule="required" data-msg="Please enter a valid pincode" />
                         <div class="validate"></div>
                       </div>
                       
@@ -226,6 +225,8 @@
                     </div>
                     <div class="text-center"><button type="submit">Submit</button></div>
                   </form>
+                  <h3 class= "response" id="positivebuy">Buyer Information has been received. Thank you!</h3>
+                  <h3 class= "responsefalse" id="negativebuy">There was an error, please fill again</h3>
       
                 </div>
                 </div>
@@ -234,36 +235,36 @@
 
 
                 <div
-                  class="col-lg-12 col-md-12 col-sm-12 portfolio-item2 filter-card wow fadeInUp cardsmall contact"
-                  style="text-align: center;padding: 0 20% 0 20%;"
+                  class="col-lg-12 col-md-12 col-sm-12 portfolio-item2 filter-card wow fadeInUp cardsmall contact buysellcontainer"
                 >
                 <h1>Sell</h1>
                 <div class="col-lg-12 mt-5 mt-lg-0" >
 
-                  <form action="forms1/contact.php" method="post" role="form" class="php-email-form">
+                  <form action="" autocomplete="off" onsubmit="return postToGooglesell();"  target="_self" id="formsell" class="php-email-form">
+                    
                     <div class="form-row">
                       <div class="col-md-12 form-group">
-                        <input type="text" name="name" class="form-control" style ="border-radius:50px;" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                        <input type="text" class="form-control" style ="border-radius:50px;" name="entry.1886323746"  id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required/>
                         <div class="validate"></div>
                       </div>
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" style ="border-radius:50px;" name="phone" id="phone" placeholder="Phone number" data-rule="required" data-msg="Please enter a valid phonenumber" />
+                        <input type="text" class="form-control" style ="border-radius:50px;" name="entry.533177186" id="phone" placeholder="Phone number" data-rule="required" data-msg="Please enter a valid phonenumber"pattern="^\d{10}$"  required/>
                         <div class="validate"></div>
                       </div>
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" style ="border-radius:50px;" name="product" id="product" placeholder="Product" data-rule="required" data-msg="Please enter a valid product" />
+                        <input type="text" class="form-control" style ="border-radius:50px;" name="entry.1951319199" id="product" placeholder="Product" data-rule="required" data-msg="Please enter a valid product" required/>
                         <div class="validate"></div>
                       </div>
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" style ="border-radius:50px;" name="address" id="address" placeholder="Address" data-rule="required" data-msg="Please enter a valid address" />
+                        <input type="text" class="form-control" style ="border-radius:50px;" name="entry.1932260998" id="address" placeholder="Address" data-rule="required" data-msg="Please enter a valid address" required/>
                         <div class="validate"></div>
                       </div>
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" style ="border-radius:50px;" name="district" id="district" placeholder="District" data-rule="required" data-msg="Please enter a valid district" />
+                        <input type="text" class="form-control" style ="border-radius:50px;" name="entry.450284864" id="district" placeholder="District" data-rule="required" data-msg="Please enter a valid district" required/>
                         <div class="validate"></div>
                       </div>
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" style ="border-radius:50px;" name="pin" id="pin" placeholder="Pincode" data-rule="required" data-msg="Please enter a valid pincode" />
+                        <input type="text" class="form-control" style ="border-radius:50px;" name="entry.528215761" id="pincode" placeholder="Pincode" data-rule="required" data-msg="Please enter a valid pincode" required/>
                         <div class="validate"></div>
                       </div>
                       
@@ -272,10 +273,12 @@
                     <div class="mb-3">
                       <div class="loading">Loading</div>
                       <div class="error-message"></div>
-                      <div class="sent-message">Your information has been received. Thank you!</div>
+                      <div class="sent-message">Seller Information has been received. Thank you!</div>
                     </div>
                     <div class="text-center"><button type="submit">Submit</button></div>
                   </form>
+                  <h3 class= "response" id="positivesell">Seller Information has been received. Thank you!</h3>
+                  <h3 class= "responsefalse" id="negativesell">There was an error, please fill again</h3>
       
                 </div>
                   
@@ -289,11 +292,21 @@
         </div>
       </section>
       <!-- End Portfolio Section -->
+      <div style="margin-top:50px;">
+      </div>
+      
+      <div class="cataloglayer">
+        <img
+          src="assets/img/exports/footerbg.png"
+          alt="bg-shape"
+          class="catalogl4image"
+        />
+      </div>
     </main>
     <!-- End #main -->
 
     <!-- ======= Footer ======= -->
-    <footer id="footer">
+    <footer id="footer" style="position: relative; z-index: 1000;">
       <div class="footer-top">
         <div class="container">
           <div class="row">
@@ -337,6 +350,96 @@
 
     <!-- <script src="assets/vendor/venobox/venobox.min.js"></script> -->
 
+    <script>
+      function postToGooglebuy() {
+                  var field1 = $("#namebuy").val();
+                  var field2 = $("#phonebuy").val();
+                  var field3 = $("#businessName").val();
+                  var field4 = $("#businessType").val();
+                  var field5 = $("#businessAddress").val();
+                  var field6 = $("#pincodebuy").val();
+               
+              // if(field1 == ""){
+              //   alert('Please Fill Your Name');
+              //   document.getElementById("name").focus();
+              //   return false;
+              // }
+              // if(field2 == "" || field2.length > 10 || field2.length < 10){
+              //   alert('Please Fill Your Mobile Number');
+              //   document.getElementById("phone").focus();
+              //   return false;
+              // }
+             
+              
+        
+                      $.ajax({
+                          url: "https://docs.google.com/forms/d/e/1FAIpQLSdksWCrhhP7-xBbZHjLY81H_3DHRO4CRrSLDXFCR7r76_vEDQ/formResponse?",
+                          data: {"entry.1886323746": field1, "entry.533177186": field2,"entry.1951319199": field3,"entry.1932260998": field4,"entry.450284864": field5,"entry.528215761": field6},
+                          type: "POST",
+                          dataType: "xml",
+                          success: function(d)
+                {
+                  $('#negativebuy').show();
+                },
+                error: function(x, y, z)
+                  {
+      
+                    // document.location.href="#";
+                    $('#positivebuy').show();
+                $('#formbuy').hide();
+                    
+                  }
+                      });
+              return false;
+                  }
+      </script>
+
+<script>
+  function postToGooglesell() {
+                  var field1 = $("#name").val();
+                  // var field2 = $("#emailField").val();
+                  var field2 = $("#phone").val();
+                  var field3 = $("#product").val();
+                  var field4 = $("#address").val();
+                  var field5 = $("#district").val();
+                  var field6 = $("#pincode").val();
+                  // var field4 = $("#cinema option:selected").text();
+           
+          // if(field1 == ""){
+          //   alert('Please Fill Your Name');
+          //   document.getElementById("name").focus();
+          //   return false;
+          // }
+          // if(field2 == "" || field2.length > 10 || field2.length < 10){
+          //   alert('Please Fill Your Mobile Number');
+          //   document.getElementById("phone").focus();
+          //   return false;
+          // }
+         
+          
+    
+                  $.ajax({
+                      url: "https://docs.google.com/forms/d/e/1FAIpQLScwaZNCeBj1hroK4OTXLVxL1ImpfnQg8exTjdDiV-aMekzyQw/formResponse?",
+            data: {"entry.1886323746": field1, "entry.533177186": field2,"entry.1951319199": field3,"entry.1932260998": field4,"entry.450284864": field5,"entry.528215761": field6},
+                      type: "POST",
+                      dataType: "xml",
+                      success: function(d)
+            {
+              $('#negativesell').show();
+            },
+            error: function(x, y, z)
+              {
+  
+                // document.location.href="#";
+                $('#positivesell').show();
+            $('#formsell').hide();
+                
+              }
+                  });
+          return false;
+              }
+  </script>
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -356,7 +459,7 @@
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/venobox/venobox.min.js"></script>
     <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
